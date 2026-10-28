@@ -1,0 +1,15 @@
+JARVIS BACKEND - DEPLOY STEPS
+
+1) Render.com par sign in karo, GitHub connect karo.
+2) New + > Web Service > sarfarajsk6205-coder/Jarvis repository select karo.
+3) Runtime Python; Build Command: pip install -r requirements.txt
+4) Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+5) Health Check Path: /api/health; Free plan select karke deploy karo.
+6) Environment tab mein ALLOWED_ORIGINS ki value rakho:
+https://headless-gqgmunnidkg-sarfarajsk6205-140e.wix-site-host.com
+7) Ek provider ki API key Render Environment mein add karo (example GEMINI_API_KEY). Key ko GitHub, Wix frontend, ya chat mein mat daalna.
+8) Deploy complete hone par Render ka generated URL copy karo aur uske aage /api/health kholo. JSON mein ok true hona chahiye.
+9) Wix website ke backend URL setting mein sirf base Render URL daalo, /api/chat mat lagao. Save URL karo.
+10) Wix widget mein wahi provider choose karo jiska API key Render par add kiya hai.
+
+IMPORTANT: Backend tab tak live nahi maana jayega jab tak Render deploy successful na ho aur /api/health check pass na ho. Real AI replies ke liye valid API key zaroori hai; provider ke charges/free limits apply ho sakte hain.
